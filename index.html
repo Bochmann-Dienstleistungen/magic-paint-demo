@@ -108,17 +108,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 /* Hero image side */
 .hero-image{position:relative;z-index:2}
 .hero-image-wrap{
-  position:relative;border-radius:30px;overflow:hidden;
+  position:relative;border-radius:20px 20px 0 0;overflow:visible;
   aspect-ratio:4/5;
-  box-shadow:0 32px 80px rgba(42,16,64,.2);
+  box-shadow:0 24px 60px rgba(42,16,64,.18);
 }
+.hero-image-wrap > img{border-radius:20px 20px 0 0;width:100%;height:100%;object-fit:cover;object-position:top;display:block}
 .hero-image-wrap img{width:100%;height:100%;object-fit:cover;object-position:top}
 .hero-image-badge{
-  position:absolute;bottom:24px;left:24px;right:24px;
-  background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
-  border-radius:16px;padding:16px 20px;
+  position:absolute;bottom:-28px;left:0;right:0;
+  background:#fff;
+  border-radius:0 0 20px 20px;padding:14px 20px;
   display:flex;align-items:center;gap:14px;
-  box-shadow:0 8px 32px rgba(42,16,64,.15);
+  box-shadow:0 12px 32px rgba(42,16,64,.12);
+  border-top:2px solid rgba(232,20,154,.1);
 }
 .hero-image-badge-icon{font-size:2rem}
 .hero-image-badge strong{font-family:'Fredoka One',cursive;font-size:.95rem;color:var(--ink);display:block}
@@ -360,8 +362,10 @@ footer{background:linear-gradient(135deg,#2a0e40,#1a0060);padding:40px 48px;text
     <li><a href="#referenzen">Referenzen</a></li>
     <li><a href="#kontakt">Kontakt</a></li>
   </ul>
-  <a href="tel:+4917420982870" class="nav-call">📞 Anrufen</a>
-  <a href="https://wa.me/4917420982870" class="nav-cta">Jetzt buchen</a>
+  <div style="display:flex;gap:8px;align-items:center">
+    <a href="tel:+4917420982870" class="nav-call">📞 Anrufen</a>
+    <a href="https://wa.me/4917420982870" class="nav-cta">Jetzt buchen</a>
+  </div>
   <div class="nav-ham" onclick="document.getElementById('nm').classList.toggle('open')">
     <span></span><span></span><span></span>
   </div>
