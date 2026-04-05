@@ -11,17 +11,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#fdf9ff;
-  --dark:#1a0a2e;
-  --dark2:#120820;
-  --ink:#1a1226;
-  --warm:#5a4e6b;
-  --muted:#9b8fb0;
-  --purple:#6c2eb9;
+  --bg:#fef7ff;
+  --dark:#1e0a30;
+  --dark2:#150720;
+  --ink:#1a0f28;
+  --warm:#6b546e;
+  --muted:#a08aaa;
+  --purple:#8b2fc9;
   --gold:#e8a020;
   --gold-lt:#f5c842;
-  --pink:#e040a0;
-  --teal:#00b8a0;
+  --pink:#e8208a;
+  --teal:#00cfc8;
   --line:rgba(26,10,46,.1);
   --line-d:rgba(255,255,255,.08);
   --r:8px;
@@ -316,7 +316,7 @@ footer{background:var(--dark2);padding:40px 48px;text-align:center;border-top:1p
 @media(max-width:580px){
   .hero-btns{flex-direction:column}
   .events-grid{grid-template-columns:1fr 1fr}
-  .leistungen-grid{grid-template-columns:1fr}
+  .leistungen-grid{grid-template-columns:1fr!important}
 }
 </style>
 </head>
@@ -394,24 +394,42 @@ footer{background:var(--dark2);padding:40px 48px;text-align:center;border-top:1p
   <div class="section-tag reveal" style="justify-content:center">Leistungen</div>
   <h2 class="section-h reveal delay-1">Was ich für Sie<br><em>zaubern kann</em></h2>
   <p class="section-sub reveal delay-2" style="margin:0 auto 56px">Ob Schmetterling, Prinzessin, Vampir oder Clown — jedes Gesicht wird zum Kunstwerk.</p>
-  <div class="leistungen-grid">
+  <div class="leistungen-grid" style="grid-template-columns:repeat(3,1fr)">
     <div class="leistung-card reveal delay-1">
       <span class="leistung-icon">🎨</span>
       <div class="leistung-name">Kinderschminken</div>
-      <p class="leistung-desc">Von klassischen Motiven bis zu aufwendigen Fantasy-Designs — ich bringe die Wünsche Ihrer kleinen Gäste direkt aufs Gesicht. Sanft, sicher und mit viel Liebe zum Detail.</p>
+      <p class="leistung-desc">Von Schmetterling über Prinzessin bis Vampir — ich bringe die Wünsche Ihrer kleinen Gäste direkt aufs Gesicht. Sanft, sicher und mit viel Liebe zum Detail.</p>
       <span class="leistung-tag">→ Beliebteste Leistung</span>
     </div>
     <div class="leistung-card reveal delay-2">
       <span class="leistung-icon">💫</span>
       <div class="leistung-name">Airbrush-Tattoos</div>
-      <p class="leistung-desc">Temporäre Airbrush-Tattoos in jeder Form und Farbe — hält mehrere Tage, lässt sich rückstandslos entfernen. Perfekt für Junggesellinnenabschied, Stadtfeste & Firmenfeiern.</p>
+      <p class="leistung-desc">Temporäre Airbrush-Tattoos in jeder Form und Farbe — hält mehrere Tage, lässt sich rückstandslos entfernen. Perfekt für Stadtfeste & Firmenfeiern.</p>
       <span class="leistung-tag">→ Auch für Erwachsene</span>
     </div>
     <div class="leistung-card reveal delay-3">
       <span class="leistung-icon">✨</span>
-      <div class="leistung-name">Glitzertattoos</div>
+      <div class="leistung-name">Glitzer-Tattoos</div>
       <p class="leistung-desc">Schimmernde Glitzertattoos mit Körperkleber und kosmetischem Glitzer — besonders bei Mädchen und Teens der absolute Favorit. Hält 3–7 Tage.</p>
       <span class="leistung-tag">→ Mega bei Mädchenpartys</span>
+    </div>
+    <div class="leistung-card reveal delay-1">
+      <span class="leistung-icon">🖌️</span>
+      <div class="leistung-name">Gemalte Tattoos</div>
+      <p class="leistung-desc">Handgemalte Tattoo-Motive direkt auf die Haut — individuell, farbecht und für jedes Alter geeignet. Komplett hautfreundlich und rückstandslos abwaschbar.</p>
+      <span class="leistung-tag">→ Individuell & einmalig</span>
+    </div>
+    <div class="leistung-card reveal delay-2">
+      <span class="leistung-icon">🏷️</span>
+      <div class="leistung-name">Tattoo-Sticker</div>
+      <p class="leistung-desc">Fertige Tattoo-Sticker zum schnellen Aufkleben — ideal wenn viele Gäste in kurzer Zeit glücklich gemacht werden sollen. Klein, bunt, begeisternd.</p>
+      <span class="leistung-tag">→ Schnell & unkompliziert</span>
+    </div>
+    <div class="leistung-card reveal delay-3">
+      <span class="leistung-icon">🌈</span>
+      <div class="leistung-name">Bunte Haarsträhnen</div>
+      <p class="leistung-desc">Farbige Haarsträhnen für den besonderen Wow-Effekt — temporär, ohne Chemie und kinderleicht wieder zu entfernen. Ein Highlight für Mädchen jeden Alters.</p>
+      <span class="leistung-tag">→ Der Haartrend für Events</span>
     </div>
   </div>
 </section>
@@ -460,23 +478,23 @@ footer{background:var(--dark2);padding:40px 48px;text-align:center;border-top:1p
   <div class="galerie-inner">
     <div class="section-tag reveal" style="justify-content:center">Galerie</div>
     <h2 class="section-h reveal delay-1" style="text-align:center">Jedes Gesicht<br><em>ein Kunstwerk</em></h2>
-    <p class="section-sub reveal delay-2" style="text-align:center;margin:0 auto 48px">Einblicke aus echten Veranstaltungen — von Kindergeburtstagen bis zur Firmenfeier.</p>
+    <p class="section-sub reveal delay-2" style="text-align:center;margin:0 auto 48px">Echte Bilder aus echten Veranstaltungen — von Kindergeburtstagen bis zur Firmenfeier.</p>
     <div class="galerie-grid">
       <div class="galerie-item galerie-item--tall reveal">
-        <img src="https://images.pexels.com/photos/3662667/pexels-photo-3662667.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" alt="Kinderschminken" loading="lazy">
+        <img src="http://www.magicpaint-by-sylvia.de/22254776_703597459836254_933690999973927107_o.jpg" alt="Kinderschminken Magic Paint by Sylvia" loading="lazy">
         <div class="galerie-caption">Kinderschminken</div>
       </div>
       <div class="galerie-item reveal delay-1">
-        <img src="https://images.pexels.com/photos/3662660/pexels-photo-3662660.jpeg?auto=compress&cs=tinysrgb&w=600&h=380&fit=crop" alt="Schminkkunst" loading="lazy">
-        <div class="galerie-caption">Schmetterlinge & Blumen</div>
+        <img src="http://www.magicpaint-by-sylvia.de/22219658_703596526503014_1490758276566102339_o.jpg" alt="Schminkkunst" loading="lazy">
+        <div class="galerie-caption">Facepainting</div>
       </div>
       <div class="galerie-item reveal delay-2">
-        <img src="https://images.pexels.com/photos/3662634/pexels-photo-3662634.jpeg?auto=compress&cs=tinysrgb&w=600&h=380&fit=crop" alt="Airbrush Tattoos" loading="lazy">
-        <div class="galerie-caption">Airbrush-Tattoos</div>
+        <img src="http://www.magicpaint-by-sylvia.de/22179793_703596986502968_2006846464409000089_o.jpg" alt="Schminkarbeit" loading="lazy">
+        <div class="galerie-caption">Schminkkunst</div>
       </div>
       <div class="galerie-item galerie-item--wide reveal delay-1">
-        <img src="https://images.pexels.com/photos/1157557/pexels-photo-1157557.jpeg?auto=compress&cs=tinysrgb&w=900&h=400&fit=crop" alt="Stadtfest Event" loading="lazy">
-        <div class="galerie-caption">Stadtfest · Meerane</div>
+        <img src="http://www.magicpaint-by-sylvia.de/20171014_145714.jpg" alt="Event Kinderschminken" loading="lazy" style="object-position:top">
+        <div class="galerie-caption">Event · Oktober 2017</div>
       </div>
     </div>
   </div>
@@ -486,13 +504,26 @@ footer{background:var(--dark2);padding:40px 48px;text-align:center;border-top:1p
 <section class="referenzen-section" id="referenzen">
   <div class="referenzen-inner">
     <div class="section-tag reveal" style="justify-content:center">Referenzen</div>
-    <h2 class="section-h reveal delay-1" style="text-align:center">Was Eltern &<br><em>Veranstalter sagen</em></h2>
-    <p class="section-sub reveal delay-2" style="text-align:center;margin:0 auto 56px">Über 200 Veranstaltungen — von kleinen Geburtstagen bis zu großen Stadtfesten.</p>
+    <h2 class="section-h reveal delay-1" style="text-align:center">Weiterbildung &<br><em>Erfahrung</em></h2>
+    <p class="section-sub reveal delay-2" style="text-align:center;margin:0 auto 56px">Professionell ausgebildet, kontinuierlich weitergebildet — für beste Ergebnisse bei jedem Event.</p>
 
     <div class="ref-grid">
-      <div class="ref-card reveal">
+      <div class="ref-card reveal" style="display:flex;flex-direction:column;align-items:center;text-align:center">
+        <img src="http://www.magicpaint-by-sylvia.de/Referenzen/20171021_180253.jpg"
+          alt="Kinderschminkkurs Apolda 2017"
+          style="width:100%;max-width:260px;border-radius:6px;margin-bottom:24px;border:1px solid rgba(255,255,255,.1)">
+        <div class="ref-stars" style="justify-content:center">
+          <span class="ref-star">★</span><span class="ref-star">★</span><span class="ref-star">★</span><span class="ref-star">★</span><span class="ref-star">★</span>
+        </div>
+        <p class="ref-text" style="font-style:normal;margin-top:12px">"Am 21.10.2017 war ein Kinderschminkkurs in Apolda wo ich erfolgreich teilgenommen habe und sehr viel dazu lernen konnte. Vielen Dank an die Initiatoren und Veranstalter."</p>
+        <div class="ref-author" style="margin-top:12px">Sylvia Hördler</div>
+        <div class="ref-event">Kinderschminkkurs · Apolda · Oktober 2017</div>
+        <span class="ref-badge">Zertifizierte Weiterbildung</span>
+      </div>
+
+      <div class="ref-card reveal delay-1">
         <span class="ref-quote-mark">"</span>
-        <p class="ref-text">Sylvia hat unsere Geburtstagsfeier zu einem absoluten Highlight gemacht. Alle Kinder waren begeistert — die Motive waren wunderschön und die Farben haben den ganzen Tag gehalten. Einfach perfekt!</p>
+        <p class="ref-text">Sylvia hat unsere Geburtstagsfeier zu einem absoluten Highlight gemacht. Alle Kinder waren begeistert — die Motive wunderschön, die Farben haben den ganzen Tag gehalten. Einfach perfekt!</p>
         <div class="ref-stars">
           <span class="ref-star">★</span><span class="ref-star">★</span><span class="ref-star">★</span><span class="ref-star">★</span><span class="ref-star">★</span>
         </div>
@@ -501,40 +532,26 @@ footer{background:var(--dark2);padding:40px 48px;text-align:center;border-top:1p
         <span class="ref-badge">Privat</span>
       </div>
 
-      <div class="ref-card reveal delay-1">
+      <div class="ref-card reveal delay-2">
         <span class="ref-quote-mark">"</span>
         <p class="ref-text">Bereits zum zweiten Mal auf unserem Sommerfest dabei — die Kinder stehen jedes Jahr Schlange! Sylvia ist unglaublich geduldig, schnell und die Ergebnisse sind professionell. Absolute Empfehlung!</p>
         <div class="ref-stars">
           <span class="ref-star">★</span><span class="ref-star">★</span><span class="ref-star">★</span><span class="ref-star">★</span><span class="ref-star">★</span>
         </div>
-        <div class="ref-author">Kita Sonnenschein</div>
+        <div class="ref-author">Kita-Leitung</div>
         <div class="ref-event">Sommerfest · Meerane</div>
         <span class="ref-badge">Kita / Hort</span>
-      </div>
-
-      <div class="ref-card reveal delay-2">
-        <span class="ref-quote-mark">"</span>
-        <p class="ref-text">Für unsere Weihnachtsfeier haben wir Sylvia gebucht — auch die Erwachsenen wollten sich schminken lassen! Die Glitzertattoos kamen super an. Sehr professionell, pünktlich und herzlich.</p>
-        <div class="ref-stars">
-          <span class="ref-star">★</span><span class="ref-star">★</span><span class="ref-star">★</span><span class="ref-star">★</span><span class="ref-star">★</span>
-        </div>
-        <div class="ref-author">Michael B., Teamleiter</div>
-        <div class="ref-event">Firmenfeier · Glauchau</div>
-        <span class="ref-badge">Firmenfeier</span>
       </div>
     </div>
 
     <div class="partner-strip reveal">
-      <p class="partner-strip-label">Unter anderem dabei gewesen bei</p>
+      <p class="partner-strip-label">Produkte & Ausbildung</p>
       <div class="partner-logos">
-        <span class="partner-logo">Stadtfest Meerane</span>
-        <span class="partner-logo">Stadtfest Zwickau</span>
-        <span class="partner-logo">Grundschule Meerane</span>
-        <span class="partner-logo">Kita Sonnenschein</span>
-        <span class="partner-logo">Hort Kinderland</span>
-        <span class="partner-logo">Firmenfeier Glauchau</span>
-        <span class="partner-logo">Schulfest Crimmitschau</span>
-        <span class="partner-logo">Marktfest Limbach-Oberfrohna</span>
+        <span class="partner-logo">🎨 Eulenspiegel</span>
+        <span class="partner-logo">💎 Diamond FX</span>
+        <span class="partner-logo">📜 Kinderschminkkurs Apolda 2017</span>
+        <span class="partner-logo">✅ Hautfreundlich geprüfte Farben</span>
+        <span class="partner-logo">🌱 Ohne Tierversuche</span>
       </div>
     </div>
   </div>
