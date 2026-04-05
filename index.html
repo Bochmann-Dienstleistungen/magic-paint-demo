@@ -42,6 +42,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 .nav-links a:hover{color:var(--pink)}
 .nav-cta{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;font-size:.78rem;font-weight:700;border-radius:25px;transition:all .25s}
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(240,24,144,.3)}
+.nav-call{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border:2px solid rgba(139,37,217,.25);color:var(--purple);font-size:.78rem;font-weight:700;border-radius:25px;transition:all .25s;background:#fff}
+.nav-call:hover{border-color:var(--purple);box-shadow:0 4px 16px rgba(139,37,217,.15);transform:translateY(-1px)}
 .nav-ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
 .nav-ham span{display:block;width:24px;height:2px;background:var(--pink);border-radius:2px}
 .nav-mobile{display:none;position:fixed;inset:0;z-index:490;background:var(--bg);padding:90px 40px 40px;flex-direction:column;gap:28px}
@@ -358,6 +360,7 @@ footer{background:linear-gradient(135deg,#2a0e40,#1a0060);padding:40px 48px;text
     <li><a href="#referenzen">Referenzen</a></li>
     <li><a href="#kontakt">Kontakt</a></li>
   </ul>
+  <a href="tel:+4917420982870" class="nav-call">📞 Anrufen</a>
   <a href="https://wa.me/4917420982870" class="nav-cta">Jetzt buchen</a>
   <div class="nav-ham" onclick="document.getElementById('nm').classList.toggle('open')">
     <span></span><span></span><span></span>
@@ -370,7 +373,8 @@ footer{background:linear-gradient(135deg,#2a0e40,#1a0060);padding:40px 48px;text
   <a href="#galerie" onclick="document.getElementById('nm').classList.remove('open')">Galerie</a>
   <a href="#referenzen" onclick="document.getElementById('nm').classList.remove('open')">Referenzen</a>
   <a href="#kontakt" onclick="document.getElementById('nm').classList.remove('open')">Kontakt</a>
-  <a href="https://wa.me/4917420982870" style="margin-top:8px;padding:14px 24px;background:var(--purple);color:#fff;border-radius:25px;text-align:center;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase">Jetzt buchen</a>
+  <a href="tel:+4917420982870" style="margin-top:8px;padding:14px 24px;background:#fff;color:var(--purple);border:2px solid var(--purple);border-radius:25px;text-align:center;font-size:.82rem;font-weight:700">📞 Anrufen</a>
+  <a href="https://wa.me/4917420982870" style="padding:14px 24px;background:var(--purple);color:#fff;border-radius:25px;text-align:center;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase">Jetzt buchen</a>
 </div>
 
 <!-- HERO -->
