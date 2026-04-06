@@ -314,6 +314,82 @@ footer{background:linear-gradient(135deg,#2a0e40,#1a0060);padding:40px 48px;text
 .legal-p{color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.85;margin-bottom:12px}
 .legal-p a{color:var(--yellow)}
 
+/* KONFIGURATOR */
+.konfig-section{background:linear-gradient(135deg,#fff5e6 0%,#fff0f8 60%,#f8f0ff 100%);padding:96px 48px}
+.konfig-inner{max-width:900px;margin:0 auto;text-align:center}
+.konfig-box{
+  background:#fff;border-radius:24px;padding:48px;
+  box-shadow:0 20px 60px rgba(255,107,53,.1),0 4px 20px rgba(42,16,64,.06);
+  border:2px solid rgba(255,107,53,.12);
+  margin-top:48px;text-align:left;
+}
+.konfig-steps{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:40px}
+.konfig-step label{font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:14px}
+.konfig-step label strong{font-size:1.6rem;color:var(--ink);letter-spacing:0;text-transform:none;font-family:'Fredoka One',cursive;vertical-align:middle}
+.k-slider-wrap{position:relative}
+input[type=range]{
+  width:100%;-webkit-appearance:none;appearance:none;height:6px;
+  background:linear-gradient(to right,var(--coral) 0%,var(--coral) var(--pct,30%),rgba(42,16,64,.1) var(--pct,30%),rgba(42,16,64,.1) 100%);
+  border-radius:4px;outline:none;cursor:pointer;
+}
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;width:22px;height:22px;border-radius:50%;
+  background:linear-gradient(135deg,var(--coral),var(--pink));
+  box-shadow:0 4px 12px rgba(255,107,53,.4);cursor:pointer;border:3px solid #fff;
+}
+.k-scale{display:flex;justify-content:space-between;font-size:.68rem;color:var(--muted);margin-top:8px;font-weight:600}
+.k-checks{display:flex;flex-direction:column;gap:10px}
+.k-check{
+  display:flex;align-items:center;gap:12px;
+  padding:12px 16px;border-radius:12px;border:2px solid var(--line);
+  cursor:pointer;transition:all .2s;font-size:.88rem;font-weight:600;color:var(--ink);
+  user-select:none;
+}
+.k-check:hover{border-color:rgba(255,107,53,.3);background:rgba(255,107,53,.04)}
+.k-check input{display:none}
+.k-check-box{
+  width:20px;height:20px;border-radius:6px;border:2px solid var(--line);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  transition:all .2s;background:#fff;
+}
+.k-check.active{border-color:var(--coral);background:rgba(255,107,53,.06)}
+.k-check.active .k-check-box{background:linear-gradient(135deg,var(--coral),var(--pink));border-color:transparent}
+.k-check.active .k-check-box::after{content:'✓';color:#fff;font-size:.7rem;font-weight:700}
+.konfig-result{
+  background:linear-gradient(135deg,rgba(255,107,53,.06),rgba(232,20,154,.06));
+  border:2px solid rgba(255,107,53,.15);border-radius:16px;
+  padding:32px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;
+}
+.konfig-result-info{flex:1;min-width:200px}
+.konfig-time{font-family:'Fredoka One',cursive;font-size:1.5rem;color:var(--ink);margin-bottom:6px}
+.konfig-time span{font-size:2rem;color:var(--coral)}
+.konfig-note{font-size:.8rem;color:var(--muted);font-weight:500}
+.konfig-wa-btn{
+  display:inline-flex;align-items:center;gap:10px;flex-shrink:0;
+  padding:16px 28px;background:#25D366;color:#fff;
+  font-size:.88rem;font-weight:700;border-radius:25px;transition:all .25s;
+  white-space:nowrap;
+}
+.konfig-wa-btn:hover{background:#1ebe5d;transform:translateY(-2px);box-shadow:0 12px 30px rgba(37,211,102,.4)}
+.konfig-wa-btn svg{width:20px;height:20px;fill:#fff;flex-shrink:0}
+.konfig-hint{text-align:center;font-size:.78rem;color:var(--muted);margin-top:20px;font-weight:500}
+.konfig-hint strong{color:var(--coral)}
+
+/* MOBILE STICKY BAR */
+.sticky-bar{
+  display:none;position:fixed;bottom:0;left:0;right:0;z-index:600;
+  background:#fff;border-top:2px solid rgba(255,107,53,.15);
+  padding:12px 20px;gap:10px;align-items:center;
+  box-shadow:0 -8px 32px rgba(42,16,64,.1);
+}
+.sticky-bar-left{flex:1;min-width:0}
+.sticky-bar-title{font-size:.72rem;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sticky-bar-sub{font-size:.62rem;color:var(--muted);font-weight:500}
+.sticky-bar a{display:inline-flex;align-items:center;gap:7px;padding:11px 18px;border-radius:20px;font-size:.78rem;font-weight:700;white-space:nowrap;flex-shrink:0}
+.sticky-bar .s-call{background:rgba(139,37,217,.08);color:var(--purple);border:2px solid rgba(139,37,217,.2)}
+.sticky-bar .s-wa{background:#25D366;color:#fff}
+@media(max-width:768px){.sticky-bar{display:flex}}
+
 /* RESPONSIVE */
 @media(max-width:900px){
   nav{padding:0 20px}
@@ -463,6 +539,62 @@ footer{background:linear-gradient(135deg,#2a0e40,#1a0060);padding:40px 48px;text
       <div class="leistung-name">Bunte Haarsträhnen</div>
       <p class="leistung-desc">Farbige Haarsträhnen für den besonderen Wow-Effekt — temporär, ohne Chemie und kinderleicht wieder zu entfernen. Ein Highlight für Mädchen jeden Alters.</p>
       <span class="leistung-tag">→ Der Haartrend für Events</span>
+    </div>
+  </div>
+</section>
+
+<!-- KONFIGURATOR -->
+<section class="konfig-section" id="konfigurator">
+  <div class="konfig-inner">
+    <div class="section-tag reveal" style="justify-content:center">🎯 Party-Planer</div>
+    <h2 class="section-h reveal delay-1">Passt Magic Paint<br><em>zu meinem Event?</em></h2>
+    <p class="section-sub reveal delay-2" style="margin:0 auto 0;text-align:center">Einfach konfigurieren — und sofort sehen, wie lange Sylvia für Ihren Event braucht.</p>
+    <div class="konfig-box reveal delay-1">
+      <div class="konfig-steps">
+        <div class="konfig-step">
+          <label>Wie viele Kinder kommen? &nbsp;<strong id="k-count">15</strong></label>
+          <div class="k-slider-wrap">
+            <input type="range" id="k-slider" min="3" max="60" value="15">
+          </div>
+          <div class="k-scale"><span>3</span><span>15</span><span>30</span><span>45</span><span>60</span></div>
+        </div>
+        <div class="konfig-step">
+          <label>Was soll ich zaubern?</label>
+          <div class="k-checks">
+            <label class="k-check active" data-min="6">
+              <input type="checkbox" checked>
+              <span class="k-check-box"></span>
+              🎨 Kinderschminken
+            </label>
+            <label class="k-check" data-min="4">
+              <input type="checkbox">
+              <span class="k-check-box"></span>
+              💫 Airbrush-Tattoos
+            </label>
+            <label class="k-check" data-min="3">
+              <input type="checkbox">
+              <span class="k-check-box"></span>
+              ✨ Glitzer-Tattoos
+            </label>
+            <label class="k-check" data-min="2">
+              <input type="checkbox">
+              <span class="k-check-box"></span>
+              🌈 Haarsträhnen
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="konfig-result">
+        <div class="konfig-result-info">
+          <div class="konfig-time">⏱️ Ca. <span id="k-time">1,5 Std.</span> für Ihren Event</div>
+          <div class="konfig-note">Sylvia schickt Ihnen auf Wunsch ein kostenloses, unverbindliches Angebot.</div>
+        </div>
+        <a href="#" id="k-wa-btn" class="konfig-wa-btn">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Kostenloses Angebot anfragen
+        </a>
+      </div>
+      <p class="konfig-hint">💬 Sylvia antwortet in der Regel <strong>innerhalb von 2 Stunden</strong> — auch abends und am Wochenende.</p>
     </div>
   </div>
 </section>
@@ -711,9 +843,82 @@ footer{background:linear-gradient(135deg,#2a0e40,#1a0060);padding:40px 48px;text
   </div>
 </section>
 
+<!-- MOBILE STICKY BAR -->
+<div class="sticky-bar" id="sticky-bar">
+  <div class="sticky-bar-left">
+    <div class="sticky-bar-title">Magic Paint by Sylvia</div>
+    <div class="sticky-bar-sub">Kinderschminken · Meerane & Umgebung</div>
+  </div>
+  <a href="tel:+4917420982870" class="s-call">📞 Anrufen</a>
+  <a href="https://wa.me/4917420982870?text=Hallo%20Sylvia%2C%20ich%20möchte%20einen%20Termin%20anfragen." class="s-wa">WhatsApp</a>
+</div>
+
 <script>
 const obs = new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:.1,rootMargin:'0px 0px -50px 0px'});
 document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
+
+// KONFIGURATOR
+(function(){
+  const slider = document.getElementById('k-slider');
+  const countEl = document.getElementById('k-count');
+  const timeEl = document.getElementById('k-time');
+  const waBtn = document.getElementById('k-wa-btn');
+  const checks = document.querySelectorAll('.k-check');
+
+  function updateSliderBg(){
+    const pct = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+    slider.style.setProperty('--pct', pct + '%');
+  }
+
+  function calc(){
+    const kids = parseInt(slider.value);
+    countEl.textContent = kids;
+    updateSliderBg();
+
+    // gather selected services
+    const selected = [];
+    let maxMin = 0;
+    checks.forEach(c => {
+      if(c.classList.contains('active')){
+        const m = parseInt(c.dataset.min);
+        selected.push(c.textContent.trim());
+        if(m > maxMin) maxMin = m;
+      }
+    });
+    if(maxMin === 0){ maxMin = 5; }
+
+    const totalMin = kids * maxMin;
+    let timeStr;
+    if(totalMin < 45) timeStr = totalMin + ' Min.';
+    else if(totalMin < 75) timeStr = 'ca. 1 Std.';
+    else if(totalMin < 105) timeStr = 'ca. 1,5 Std.';
+    else if(totalMin < 135) timeStr = 'ca. 2 Std.';
+    else if(totalMin < 165) timeStr = 'ca. 2,5 Std.';
+    else if(totalMin < 210) timeStr = 'ca. 3 Std.';
+    else timeStr = 'ca. ' + Math.round(totalMin/60) + ' Std.';
+    timeEl.textContent = timeStr;
+
+    const svcText = selected.length ? selected.join(', ') : 'Leistungen nach Absprache';
+    const msg = encodeURIComponent(
+      'Hallo Sylvia! 👋 Ich plane eine Veranstaltung mit ca. ' + kids + ' Kindern und interessiere mich für: ' + svcText + '. Laut Party-Planer wären das ' + timeStr + '. Kannst du mir ein Angebot machen?'
+    );
+    waBtn.href = 'https://wa.me/4917420982870?text=' + msg;
+  }
+
+  slider.addEventListener('input', calc);
+
+  checks.forEach(c => {
+    c.addEventListener('click', function(){
+      this.classList.toggle('active');
+      const cb = this.querySelector('input[type=checkbox]');
+      cb.checked = this.classList.contains('active');
+      calc();
+    });
+  });
+
+  updateSliderBg();
+  calc();
+})();
 
 const form = document.getElementById('kontakt-form');
 const success = document.getElementById('form-success');
