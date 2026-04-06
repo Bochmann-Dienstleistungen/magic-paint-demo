@@ -731,14 +731,14 @@ input[type=range]::-moz-range-track{height:8px;border-radius:4px;background:rgba
       </div>
       <div class="konfig-anlass-area">
         <div class="k-anlass-grid">
-          <div class="k-anlass active" data-name="Kindergeburtstag">🎂 Kindergeburtstag</div>
-          <div class="k-anlass" data-name="Schulfest">🏫 Schulfest</div>
-          <div class="k-anlass" data-name="Kita-Fest">🌸 Kita-Fest</div>
-          <div class="k-anlass" data-name="Firmenfeier">🏢 Firmenfeier</div>
-          <div class="k-anlass" data-name="Stadtfest">🎪 Stadtfest</div>
-          <div class="k-anlass" data-name="Gartenfest">🌻 Gartenfest</div>
-          <div class="k-anlass" data-name="Weihnachtsfeier">🎄 Weihnachtsfeier</div>
-          <div class="k-anlass" data-name="Sonstiges">🎉 Sonstiges</div>
+          <div class="k-anlass active" data-name="Kindergeburtstag" data-label="für Ihren Kindergeburtstag">🎂 Kindergeburtstag</div>
+          <div class="k-anlass" data-name="Schulfest" data-label="für Ihr Schulfest">🏫 Schulfest</div>
+          <div class="k-anlass" data-name="Kita-Fest" data-label="für Ihr Kita-Fest">🌸 Kita-Fest</div>
+          <div class="k-anlass" data-name="Firmenfeier" data-label="für Ihre Firmenfeier">🏢 Firmenfeier</div>
+          <div class="k-anlass" data-name="Stadtfest" data-label="für Ihr Stadtfest">🎪 Stadtfest</div>
+          <div class="k-anlass" data-name="Gartenfest" data-label="für Ihr Gartenfest">🌻 Gartenfest</div>
+          <div class="k-anlass" data-name="Weihnachtsfeier" data-label="für Ihre Weihnachtsfeier">🎄 Weihnachtsfeier</div>
+          <div class="k-anlass" data-name="Sonstiges" data-label="für Ihren Event">🎉 Sonstiges</div>
         </div>
       </div>
 
@@ -1111,17 +1111,18 @@ document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.
 
     // Active anlass
     const activeAnlass = document.querySelector('.k-anlass.active');
-    const anlass = activeAnlass ? activeAnlass.dataset.name : 'Ihren Event';
+    const anlass      = activeAnlass ? activeAnlass.dataset.name  : 'Event';
+    const anlassLabel = activeAnlass ? activeAnlass.dataset.label : 'für Ihren Event';
 
     const totalMin = kids * maxMin;
     const timeStr  = toTimeStr(totalMin);
 
     timeEl.textContent  = timeStr;
-    labelEl.textContent = 'für Ihren ' + anlass;
+    labelEl.textContent = anlassLabel;
     detailEl.textContent = kids + ' Kinder × ' + names + ' (' + maxMin + ' Min./Kind)';
 
     const msg = encodeURIComponent(
-      'Hallo Sylvia! 👋 Ich plane einen ' + anlass + ' mit ca. ' + kids + ' Kindern.\n' +
+      'Hallo Sylvia! 👋 Ich plane einen ' + (anlass === 'Sonstiges' ? 'Event' : anlass) + ' mit ca. ' + kids + ' Kindern.\n' +
       'Leistungen: ' + names + '\n' +
       'Laut Party-Planer wären das ' + timeStr + '.\n\n' +
       'Kannst du mir ein unverbindliches Angebot machen?'
