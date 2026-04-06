@@ -316,70 +316,121 @@ footer{background:linear-gradient(135deg,#3d1206,#2a0018);padding:40px 48px;text
 .legal-p a{color:var(--yellow)}
 
 /* KONFIGURATOR */
-.konfig-section{background:linear-gradient(135deg,#fff5e6 0%,#fff0f8 60%,#f8f0ff 100%);padding:96px 48px}
-.konfig-inner{max-width:900px;margin:0 auto;text-align:center}
+.konfig-section{background:linear-gradient(150deg,#fff5e0 0%,#fff0f0 50%,#fff0f8 100%);padding:96px 48px}
+.konfig-inner{max-width:960px;margin:0 auto;text-align:center}
 .konfig-box{
-  background:#fff;border-radius:24px;padding:48px;
-  box-shadow:0 20px 60px rgba(255,107,53,.1),0 4px 20px rgba(42,16,64,.06);
-  border:2px solid rgba(255,107,53,.12);
-  margin-top:48px;text-align:left;
+  background:#fff;border-radius:28px;
+  box-shadow:0 32px 80px rgba(255,92,46,.1),0 4px 20px rgba(80,30,10,.06);
+  border:2px solid rgba(255,92,46,.1);
+  margin-top:48px;text-align:left;overflow:hidden;
 }
-.konfig-steps{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:40px}
-.konfig-step label{font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:14px}
-.konfig-step label strong{font-size:1.6rem;color:var(--ink);letter-spacing:0;text-transform:none;font-family:'Fredoka One',cursive;vertical-align:middle}
-.k-slider-wrap{position:relative}
+/* Step headers */
+.konfig-step-header{
+  display:flex;align-items:center;gap:14px;
+  padding:28px 36px 0;
+}
+.konfig-step-num{
+  width:36px;height:36px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--coral),var(--pink));
+  color:#fff;font-family:'Fredoka One',cursive;font-size:1.1rem;
+  display:flex;align-items:center;justify-content:center;
+}
+.konfig-step-title{font-family:'Fredoka One',cursive;font-size:1.15rem;color:var(--ink)}
+.konfig-divider{height:1px;background:rgba(80,30,10,.07);margin:0 36px}
+
+/* Step 1 — kids */
+.konfig-kids-area{padding:20px 36px 28px}
+.k-stepper{display:flex;align-items:center;gap:20px;margin-bottom:20px}
+.k-step-btn{
+  width:44px;height:44px;border-radius:50%;border:2px solid rgba(255,92,46,.3);
+  background:#fff;color:var(--coral);font-size:1.4rem;font-weight:700;
+  cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;
+  line-height:1;flex-shrink:0;
+}
+.k-step-btn:hover{background:var(--coral);color:#fff;border-color:var(--coral)}
+.k-count-display{
+  font-family:'Fredoka One',cursive;font-size:3rem;color:var(--coral);
+  min-width:80px;text-align:center;line-height:1;
+}
+.k-count-display small{display:block;font-size:.85rem;color:var(--muted);font-family:'Nunito',sans-serif;font-weight:600;margin-top:2px}
 input[type=range]{
   width:100%;-webkit-appearance:none;appearance:none;height:8px;
-  background:rgba(80,30,10,.12);
-  border-radius:4px;outline:none;cursor:pointer;
+  background:rgba(80,30,10,.12);border-radius:4px;outline:none;cursor:pointer;
 }
 input[type=range]::-webkit-slider-thumb{
-  -webkit-appearance:none;width:26px;height:26px;border-radius:50%;
+  -webkit-appearance:none;width:28px;height:28px;border-radius:50%;
   background:linear-gradient(135deg,var(--coral),var(--pink));
-  box-shadow:0 4px 16px rgba(255,92,46,.45);cursor:pointer;border:3px solid #fff;
+  box-shadow:0 4px 16px rgba(255,92,46,.5);cursor:pointer;border:3px solid #fff;
 }
 input[type=range]::-moz-range-thumb{
   width:24px;height:24px;border-radius:50%;border:3px solid #fff;
-  background:linear-gradient(135deg,var(--coral),var(--pink));
-  box-shadow:0 4px 16px rgba(255,92,46,.45);cursor:pointer;
+  background:linear-gradient(135deg,var(--coral),var(--pink));cursor:pointer;
 }
 input[type=range]::-moz-range-track{height:8px;border-radius:4px;background:rgba(80,30,10,.12)}
 .k-scale{display:flex;justify-content:space-between;font-size:.68rem;color:var(--muted);margin-top:8px;font-weight:600}
-.k-checks{display:flex;flex-direction:column;gap:10px}
-.k-check{
-  display:flex;align-items:center;gap:12px;
-  padding:12px 16px;border-radius:12px;border:2px solid var(--line);
-  cursor:pointer;transition:all .2s;font-size:.88rem;font-weight:600;color:var(--ink);
-  user-select:none;
+.k-kids-viz{
+  display:flex;flex-wrap:wrap;gap:4px;margin-top:16px;min-height:32px;
+  align-items:center;
 }
-.k-check:hover{border-color:rgba(255,107,53,.3);background:rgba(255,107,53,.04)}
-.k-check input{display:none}
-.k-check-box{
-  width:20px;height:20px;border-radius:6px;border:2px solid var(--line);
+.k-kid{font-size:1.25rem;line-height:1;transition:transform .15s}
+.k-kid-more{font-size:.72rem;font-weight:700;color:var(--coral);padding:4px 10px;background:rgba(255,92,46,.1);border-radius:20px}
+
+/* Step 2 — services */
+.konfig-services-area{padding:20px 36px 28px}
+.k-service-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.k-service{
+  display:flex;align-items:center;gap:14px;
+  padding:16px 18px;border-radius:14px;border:2px solid rgba(80,30,10,.1);
+  cursor:pointer;transition:all .2s;user-select:none;
+  background:#fff;
+}
+.k-service:hover{border-color:rgba(255,92,46,.35);background:rgba(255,92,46,.03);transform:translateY(-1px)}
+.k-service.active{border-color:var(--coral);background:linear-gradient(135deg,rgba(255,92,46,.07),rgba(232,20,154,.04))}
+.k-svc-icon{font-size:1.8rem;flex-shrink:0;line-height:1}
+.k-svc-info{flex:1;min-width:0}
+.k-svc-name{font-weight:700;font-size:.9rem;color:var(--ink);display:block;margin-bottom:2px}
+.k-svc-time{font-size:.72rem;color:var(--muted);font-weight:500}
+.k-svc-tick{
+  width:22px;height:22px;border-radius:50%;border:2px solid rgba(80,30,10,.15);
   display:flex;align-items:center;justify-content:center;flex-shrink:0;
-  transition:all .2s;background:#fff;
+  font-size:.7rem;color:transparent;transition:all .2s;background:#fff;
 }
-.k-check.active{border-color:var(--coral);background:rgba(255,107,53,.06)}
-.k-check.active .k-check-box{background:linear-gradient(135deg,var(--coral),var(--pink));border-color:transparent}
-.k-check.active .k-check-box::after{content:'✓';color:#fff;font-size:.7rem;font-weight:700}
+.k-service.active .k-svc-tick{background:linear-gradient(135deg,var(--coral),var(--pink));border-color:transparent;color:#fff}
+
+/* Step 3 — event type */
+.konfig-anlass-area{padding:20px 36px 28px}
+.k-anlass-grid{display:flex;flex-wrap:wrap;gap:8px}
+.k-anlass{
+  padding:9px 16px;border-radius:20px;border:2px solid rgba(80,30,10,.12);
+  font-size:.8rem;font-weight:600;color:var(--warm);cursor:pointer;
+  transition:all .2s;user-select:none;background:#fff;
+}
+.k-anlass:hover{border-color:var(--coral);color:var(--coral)}
+.k-anlass.active{background:linear-gradient(135deg,var(--coral),var(--pink));color:#fff;border-color:transparent}
+
+/* Result bar */
 .konfig-result{
-  background:linear-gradient(135deg,rgba(255,107,53,.06),rgba(232,20,154,.06));
-  border:2px solid rgba(255,107,53,.15);border-radius:16px;
-  padding:32px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;
+  background:linear-gradient(135deg,#fff5e0,#fff0f0);
+  border-top:2px solid rgba(255,92,46,.12);
+  padding:32px 36px;
+  display:flex;align-items:center;gap:28px;flex-wrap:wrap;
 }
-.konfig-result-info{flex:1;min-width:200px}
-.konfig-time{font-family:'Fredoka One',cursive;font-size:1.5rem;color:var(--ink);margin-bottom:6px}
-.konfig-time span{font-size:2rem;color:var(--coral)}
-.konfig-note{font-size:.8rem;color:var(--muted);font-weight:500}
+.konfig-result-main{flex:1;min-width:0}
+.konfig-result-time{
+  font-family:'Fredoka One',cursive;font-size:2.6rem;color:var(--coral);
+  line-height:1;display:block;
+}
+.konfig-result-label{font-size:.82rem;color:var(--warm);font-weight:600;margin-top:4px;display:block}
+.konfig-result-detail{font-size:.75rem;color:var(--muted);margin-top:6px;font-weight:500}
 .konfig-wa-btn{
   display:inline-flex;align-items:center;gap:10px;flex-shrink:0;
-  padding:16px 28px;background:#25D366;color:#fff;
-  font-size:.88rem;font-weight:700;border-radius:25px;transition:all .25s;
-  white-space:nowrap;
+  padding:18px 30px;background:#25D366;color:#fff;
+  font-size:.9rem;font-weight:700;border-radius:25px;transition:all .25s;
+  white-space:nowrap;box-shadow:0 8px 24px rgba(37,211,102,.3);
 }
-.konfig-wa-btn:hover{background:#1ebe5d;transform:translateY(-2px);box-shadow:0 12px 30px rgba(37,211,102,.4)}
+.konfig-wa-btn:hover{background:#1ebe5d;transform:translateY(-2px);box-shadow:0 16px 36px rgba(37,211,102,.45)}
 .konfig-wa-btn svg{width:20px;height:20px;fill:#fff;flex-shrink:0}
-.konfig-hint{text-align:center;font-size:.78rem;color:var(--muted);margin-top:20px;font-weight:500}
+.konfig-hint{text-align:center;font-size:.76rem;color:var(--muted);padding:16px 36px 24px;font-weight:500}
 .konfig-hint strong{color:var(--coral)}
 
 /* MID-PAGE CTA BANNER */
@@ -458,6 +509,17 @@ input[type=range]::-moz-range-track{height:8px;border-radius:4px;background:rgba
   .kontakt-inner{grid-template-columns:1fr;gap:48px}
   .legal-section{padding:48px 24px}
   footer{padding:32px 24px}
+  /* Konfig mobile */
+  .konfig-section{padding:64px 24px}
+  .konfig-step-header{padding:20px 20px 0}
+  .konfig-kids-area,.konfig-services-area,.konfig-anlass-area{padding:16px 20px 20px}
+  .konfig-divider{margin:0 20px}
+  .k-stepper{flex-wrap:wrap;gap:12px}
+  .k-service-grid{grid-template-columns:1fr}
+  .konfig-result{padding:24px 20px;flex-direction:column;align-items:stretch}
+  .konfig-wa-btn{text-align:center;justify-content:center}
+  .konfig-hint{padding:12px 20px 20px}
+  .cta-banner{padding:28px 24px}
 }
 @media(max-width:580px){
   .hero-btns{flex-direction:column}
@@ -590,54 +652,110 @@ input[type=range]::-moz-range-track{height:8px;border-radius:4px;background:rgba
 <section class="konfig-section" id="konfigurator">
   <div class="konfig-inner">
     <div class="section-tag reveal" style="justify-content:center">🎯 Party-Planer</div>
-    <h2 class="section-h reveal delay-1">Passt Magic Paint<br><em>zu meinem Event?</em></h2>
-    <p class="section-sub reveal delay-2" style="margin:0 auto 0;text-align:center">Einfach konfigurieren — und sofort sehen, wie lange Sylvia für Ihren Event braucht.</p>
+    <h2 class="section-h reveal delay-1">Wie lange braucht<br><em>Sylvia für Ihren Event?</em></h2>
+    <p class="section-sub reveal delay-2" style="margin:0 auto;text-align:center">Einfach konfigurieren — die Antwort bekommen Sie sofort. Kostenlos &amp; unverbindlich.</p>
+
     <div class="konfig-box reveal delay-1">
-      <div class="konfig-steps">
-        <div class="konfig-step">
-          <label>Wie viele Kinder kommen? &nbsp;<strong id="k-count">15</strong></label>
-          <div class="k-slider-wrap">
-            <input type="range" id="k-slider" min="3" max="60" value="15">
+
+      <!-- SCHRITT 1: Kinder -->
+      <div class="konfig-step-header">
+        <div class="konfig-step-num">1</div>
+        <div class="konfig-step-title">Wie viele Kinder kommen?</div>
+      </div>
+      <div class="konfig-kids-area">
+        <div class="k-stepper">
+          <button class="k-step-btn" id="k-minus">−</button>
+          <div class="k-count-display">
+            <span id="k-count">15</span>
+            <small>Kinder</small>
           </div>
-          <div class="k-scale"><span>3</span><span>15</span><span>30</span><span>45</span><span>60</span></div>
+          <button class="k-step-btn" id="k-plus">+</button>
+          <div style="flex:1">
+            <input type="range" id="k-slider" min="3" max="60" value="15">
+            <div class="k-scale"><span>3</span><span>15</span><span>30</span><span>45</span><span>60+</span></div>
+          </div>
         </div>
-        <div class="konfig-step">
-          <label>Was soll ich zaubern?</label>
-          <div class="k-checks">
-            <label class="k-check active" data-min="6">
-              <input type="checkbox" checked>
-              <span class="k-check-box"></span>
-              🎨 Kinderschminken
-            </label>
-            <label class="k-check" data-min="4">
-              <input type="checkbox">
-              <span class="k-check-box"></span>
-              💫 Airbrush-Tattoos
-            </label>
-            <label class="k-check" data-min="3">
-              <input type="checkbox">
-              <span class="k-check-box"></span>
-              ✨ Glitzer-Tattoos
-            </label>
-            <label class="k-check" data-min="2">
-              <input type="checkbox">
-              <span class="k-check-box"></span>
-              🌈 Haarsträhnen
-            </label>
+        <div class="k-kids-viz" id="k-kids-viz"></div>
+      </div>
+
+      <div class="konfig-divider"></div>
+
+      <!-- SCHRITT 2: Leistungen -->
+      <div class="konfig-step-header">
+        <div class="konfig-step-num">2</div>
+        <div class="konfig-step-title">Was soll Sylvia zaubern?</div>
+      </div>
+      <div class="konfig-services-area">
+        <div class="k-service-grid">
+          <div class="k-service active" data-min="6" data-name="Kinderschminken">
+            <span class="k-svc-icon">🎨</span>
+            <div class="k-svc-info">
+              <span class="k-svc-name">Kinderschminken</span>
+              <span class="k-svc-time">ca. 6 Min. pro Kind · beliebteste Leistung</span>
+            </div>
+            <span class="k-svc-tick">✓</span>
+          </div>
+          <div class="k-service" data-min="4" data-name="Airbrush-Tattoos">
+            <span class="k-svc-icon">💫</span>
+            <div class="k-svc-info">
+              <span class="k-svc-name">Airbrush-Tattoos</span>
+              <span class="k-svc-time">ca. 4 Min. pro Kind · auch für Erwachsene</span>
+            </div>
+            <span class="k-svc-tick">✓</span>
+          </div>
+          <div class="k-service" data-min="3" data-name="Glitzer-Tattoos">
+            <span class="k-svc-icon">✨</span>
+            <div class="k-svc-info">
+              <span class="k-svc-name">Glitzer-Tattoos</span>
+              <span class="k-svc-time">ca. 3 Min. pro Kind · hält 3–7 Tage</span>
+            </div>
+            <span class="k-svc-tick">✓</span>
+          </div>
+          <div class="k-service" data-min="2" data-name="Haarsträhnen">
+            <span class="k-svc-icon">🌈</span>
+            <div class="k-svc-info">
+              <span class="k-svc-name">Bunte Haarsträhnen</span>
+              <span class="k-svc-time">ca. 2 Min. pro Kind · ohne Chemie</span>
+            </div>
+            <span class="k-svc-tick">✓</span>
           </div>
         </div>
       </div>
+
+      <div class="konfig-divider"></div>
+
+      <!-- SCHRITT 3: Anlass -->
+      <div class="konfig-step-header">
+        <div class="konfig-step-num">3</div>
+        <div class="konfig-step-title">Was für ein Event planen Sie?</div>
+      </div>
+      <div class="konfig-anlass-area">
+        <div class="k-anlass-grid">
+          <div class="k-anlass active" data-name="Kindergeburtstag">🎂 Kindergeburtstag</div>
+          <div class="k-anlass" data-name="Schulfest">🏫 Schulfest</div>
+          <div class="k-anlass" data-name="Kita-Fest">🌸 Kita-Fest</div>
+          <div class="k-anlass" data-name="Firmenfeier">🏢 Firmenfeier</div>
+          <div class="k-anlass" data-name="Stadtfest">🎪 Stadtfest</div>
+          <div class="k-anlass" data-name="Gartenfest">🌻 Gartenfest</div>
+          <div class="k-anlass" data-name="Weihnachtsfeier">🎄 Weihnachtsfeier</div>
+          <div class="k-anlass" data-name="Sonstiges">🎉 Sonstiges</div>
+        </div>
+      </div>
+
+      <!-- ERGEBNIS -->
       <div class="konfig-result">
-        <div class="konfig-result-info">
-          <div class="konfig-time">⏱️ Ca. <span id="k-time">1,5 Std.</span> für Ihren Event</div>
-          <div class="konfig-note">Sylvia schickt Ihnen auf Wunsch ein kostenloses, unverbindliches Angebot.</div>
+        <div class="konfig-result-main">
+          <span class="konfig-result-time" id="k-time-display">ca. 1,5 Std.</span>
+          <span class="konfig-result-label">für Ihren Kindergeburtstag</span>
+          <div class="konfig-result-detail" id="k-result-detail">15 Kinder × Kinderschminken (6 Min./Kind)</div>
         </div>
         <a href="#" id="k-wa-btn" class="konfig-wa-btn">
           <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-          Kostenloses Angebot anfragen
+          Jetzt kostenlos anfragen →
         </a>
       </div>
-      <p class="konfig-hint">💬 Sylvia antwortet in der Regel <strong>innerhalb von 2 Stunden</strong> — auch abends und am Wochenende.</p>
+      <p class="konfig-hint">💬 Sylvia antwortet in der Regel <strong>innerhalb von 2 Stunden</strong> — auch abends &amp; am Wochenende 🌙</p>
+
     </div>
   </div>
 </section>
@@ -933,64 +1051,115 @@ document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.
 
 // KONFIGURATOR
 (function(){
-  const slider = document.getElementById('k-slider');
-  const countEl = document.getElementById('k-count');
-  const timeEl = document.getElementById('k-time');
-  const waBtn = document.getElementById('k-wa-btn');
-  const checks = document.querySelectorAll('.k-check');
+  const slider   = document.getElementById('k-slider');
+  const countEl  = document.getElementById('k-count');
+  const vizEl    = document.getElementById('k-kids-viz');
+  const timeEl   = document.getElementById('k-time-display');
+  const labelEl  = document.querySelector('.konfig-result-label');
+  const detailEl = document.getElementById('k-result-detail');
+  const waBtn    = document.getElementById('k-wa-btn');
+  const services = document.querySelectorAll('.k-service');
+  const anlasses = document.querySelectorAll('.k-anlass');
 
-  function updateSliderBg(){
-    const pct = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
-    slider.style.background = `linear-gradient(to right,#ff5c2e 0%,#e8149a ${pct}%,rgba(80,30,10,.12) ${pct}%,rgba(80,30,10,.12) 100%)`;
+  const KID_EMOJIS = ['👧','👦','🧒','👦','👧'];
+
+  function syncSlider(){
+    const pct = ((slider.value - slider.min)/(slider.max - slider.min))*100;
+    slider.style.background =
+      `linear-gradient(to right,#ff5c2e 0%,#e8149a ${pct}%,rgba(80,30,10,.12) ${pct}%,rgba(80,30,10,.12) 100%)`;
+  }
+
+  function renderKids(n){
+    vizEl.innerHTML = '';
+    const show = Math.min(n, 20);
+    for(let i=0;i<show;i++){
+      const s = document.createElement('span');
+      s.className = 'k-kid';
+      s.textContent = KID_EMOJIS[i % KID_EMOJIS.length];
+      vizEl.appendChild(s);
+    }
+    if(n > 20){
+      const more = document.createElement('span');
+      more.className = 'k-kid-more';
+      more.textContent = '+' + (n - 20) + ' weitere';
+      vizEl.appendChild(more);
+    }
+  }
+
+  function setCount(n){
+    n = Math.max(3, Math.min(60, n));
+    slider.value = n;
+    countEl.textContent = n;
+    syncSlider();
+    renderKids(n);
+    calc();
+  }
+
+  function toTimeStr(mins){
+    if(mins < 45) return mins + ' Min.';
+    const h = mins / 60;
+    const rounded = Math.round(h * 2) / 2;
+    return 'ca. ' + rounded.toString().replace('.',',') + ' Std.';
   }
 
   function calc(){
     const kids = parseInt(slider.value);
-    countEl.textContent = kids;
-    updateSliderBg();
+    // Active services
+    const active = Array.from(services).filter(s => s.classList.contains('active'));
+    const maxMin = active.length ? Math.max(...active.map(s => parseInt(s.dataset.min))) : 5;
+    const names  = active.length ? active.map(s => s.dataset.name).join(' + ') : 'Leistungen nach Absprache';
 
-    // gather selected services
-    const selected = [];
-    let maxMin = 0;
-    checks.forEach(c => {
-      if(c.classList.contains('active')){
-        const m = parseInt(c.dataset.min);
-        selected.push(c.textContent.trim());
-        if(m > maxMin) maxMin = m;
-      }
-    });
-    if(maxMin === 0){ maxMin = 5; }
+    // Active anlass
+    const activeAnlass = document.querySelector('.k-anlass.active');
+    const anlass = activeAnlass ? activeAnlass.dataset.name : 'Ihren Event';
 
     const totalMin = kids * maxMin;
-    let timeStr;
-    if(totalMin < 45) timeStr = totalMin + ' Min.';
-    else if(totalMin < 75) timeStr = 'ca. 1 Std.';
-    else if(totalMin < 105) timeStr = 'ca. 1,5 Std.';
-    else if(totalMin < 135) timeStr = 'ca. 2 Std.';
-    else if(totalMin < 165) timeStr = 'ca. 2,5 Std.';
-    else if(totalMin < 210) timeStr = 'ca. 3 Std.';
-    else timeStr = 'ca. ' + Math.round(totalMin/60) + ' Std.';
-    timeEl.textContent = timeStr;
+    const timeStr  = toTimeStr(totalMin);
 
-    const svcText = selected.length ? selected.join(', ') : 'Leistungen nach Absprache';
+    timeEl.textContent  = timeStr;
+    labelEl.textContent = 'für Ihren ' + anlass;
+    detailEl.textContent = kids + ' Kinder × ' + names + ' (' + maxMin + ' Min./Kind)';
+
     const msg = encodeURIComponent(
-      'Hallo Sylvia! 👋 Ich plane eine Veranstaltung mit ca. ' + kids + ' Kindern und interessiere mich für: ' + svcText + '. Laut Party-Planer wären das ' + timeStr + '. Kannst du mir ein Angebot machen?'
+      'Hallo Sylvia! 👋 Ich plane einen ' + anlass + ' mit ca. ' + kids + ' Kindern.\n' +
+      'Leistungen: ' + names + '\n' +
+      'Laut Party-Planer wären das ' + timeStr + '.\n\n' +
+      'Kannst du mir ein unverbindliches Angebot machen?'
     );
     waBtn.href = 'https://wa.me/4917420982870?text=' + msg;
   }
 
-  slider.addEventListener('input', calc);
+  slider.addEventListener('input', function(){
+    countEl.textContent = this.value;
+    syncSlider();
+    renderKids(parseInt(this.value));
+    calc();
+  });
 
-  checks.forEach(c => {
-    c.addEventListener('click', function(){
+  document.getElementById('k-minus').addEventListener('click', function(){
+    setCount(parseInt(slider.value) - 1);
+  });
+  document.getElementById('k-plus').addEventListener('click', function(){
+    setCount(parseInt(slider.value) + 1);
+  });
+
+  services.forEach(s => {
+    s.addEventListener('click', function(){
       this.classList.toggle('active');
-      const cb = this.querySelector('input[type=checkbox]');
-      cb.checked = this.classList.contains('active');
       calc();
     });
   });
 
-  updateSliderBg();
+  anlasses.forEach(a => {
+    a.addEventListener('click', function(){
+      anlasses.forEach(x => x.classList.remove('active'));
+      this.classList.add('active');
+      calc();
+    });
+  });
+
+  syncSlider();
+  renderKids(15);
   calc();
 })();
 
